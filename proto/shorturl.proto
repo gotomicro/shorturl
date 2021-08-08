@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "shorturl/proto";
+package shorturl;
+
+service Shorturl {
+  rpc Create(CreateRequest) returns (CreateReply);
+}
+
+message CreateRequest {
+  string originURL = 1;
+}
+
+message CreateReply {
+  string code = 1;
+}

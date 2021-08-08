@@ -1,0 +1,14 @@
+[server.grpc]
+port = 9001
+[server.http]
+port = 9002
+[server.governor]
+port = 9003
+[mysql]
+connMaxLifetime = "300s"
+dsn = "root:root@tcp(127.0.0.1:3306)/shorturl?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=1s&readTimeout=5s&writeTimeout=5s"
+level = "panic"
+maxIdleConns = 50
+maxOpenConns = 100
+[redis]
+addr = "127.0.0.1:6379"
